@@ -29,7 +29,7 @@ public class EventHandler implements Listener {
     private int cooldownMillis;
 
     private EventHandler() {
-
+        // test
     }
 
     public static EventHandler getInstance() {
