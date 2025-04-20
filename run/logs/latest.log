@@ -1,0 +1,100 @@
+[10:15:43] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10:15:44] [ServerMain/INFO]: Loaded 7 recipes
+[10:15:44] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[10:15:44] [Server thread/INFO]: Loading properties
+[10:15:44] [Server thread/INFO]: This server is running Paper version git-Paper-196 (MC: 1.20.1) (Implementing API version 1.20.1-R0.1-SNAPSHOT) (Git: 773dd72)
+[10:15:45] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[10:15:45] [Server thread/INFO]: Using 4 threads for Netty based IO
+[10:15:45] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[10:15:45] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 2 worker threads, and gen parallelism of 2 threads
+[10:15:45] [Server thread/INFO]: Default game type: SURVIVAL
+[10:15:45] [Server thread/INFO]: Generating keypair
+[10:15:45] [Server thread/INFO]: Starting Minecraft server on *:25565
+[10:15:45] [Server thread/INFO]: Using epoll channel type
+[10:15:45] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[10:15:45] [Server thread/INFO]: Paper: Using OpenSSL 3.0.x (Linux x86_64) cipher from Velocity.
+[10:15:46] [Server thread/INFO]: [WorldEdit] Loading server plugin WorldEdit v7.3.1+6763-2e55f4f
+[10:15:46] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@2d89e414]
+[10:15:46] [Server thread/INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.9+5934e49
+[10:15:46] [Server thread/INFO]: [KakaoEssentials] Loading server plugin KakaoEssentials v1.2.5
+[10:15:46] [Server thread/INFO]: [ViaVersion] Loading server plugin ViaVersion v5.3.2
+[10:15:46] [Server thread/INFO]: [ViaVersion] ViaVersion 5.3.2 is now loaded. Registering protocol transformers and injecting...
+[10:15:46] [Via-Mappingloader-0/INFO]: [ViaVersion] Loading block connection mappings ...
+[10:15:46] [Via-Mappingloader-0/INFO]: [ViaVersion] Using FastUtil Long2ObjectOpenHashMap for block connections
+[10:15:47] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[10:15:47] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.3.1+6763-2e55f4f
+[10:15:47] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[10:15:47] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[10:15:47] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.v1_20_R1.PaperweightAdapter as the Bukkit adapter
+[10:15:48] [Server thread/INFO]: Preparing level "world"
+[10:15:48] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[10:15:48] [Server thread/INFO]: Time elapsed: 114 ms
+[10:15:48] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[10:15:48] [Server thread/INFO]: Time elapsed: 45 ms
+[10:15:48] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[10:15:48] [Server thread/INFO]: Time elapsed: 30 ms
+[10:15:48] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.9+5934e49
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world_the_end) TNT ignition is PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world_the_end) Lighters are PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world_the_end) Lava fire is PERMITTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] (world_the_end) Fire spread is UNRESTRICTED.
+[10:15:49] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_the_end'
+[10:15:49] [Server thread/INFO]: [WorldGuard] Loading region data...
+[10:15:49] [Server thread/INFO]: [KakaoEssentials] Enabling KakaoEssentials v1.2.5
+[10:15:49] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v5.3.2
+[10:15:49] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 1.20-1.20.1 (763)
+[10:15:50] [Server thread/INFO]: Running delayed init tasks
+[10:15:50] [Server thread/INFO]: Done (5.300s)! For help, type "help"
+[10:15:50] [Server thread/INFO]: Timings Reset
+[10:15:50] [Craft Scheduler Thread - 2 - ViaVersion/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[10:16:17] [User Authenticator #0/INFO]: UUID of player Kakao__ is 5b971e91-a739-4e2a-9fa2-961fa76a6687
+[10:16:17] [Server thread/INFO]: Kakao__ joined the game
+[10:16:17] [Server thread/INFO]: Kakao__[/127.0.0.1:44716] logged in with entity id 423 at ([world]7.454290481461004, 66.15312379606114, 14.191674997013974)
+[10:16:19] [Server thread/INFO]: Kakao__ issued server command: /pl
+[10:16:24] [Server thread/INFO]: Kakao__ issued server command: /saveitems
+[10:16:25] [Server thread/INFO]: Kakao__ lost connection: Disconnected
+[10:16:25] [Server thread/INFO]: Kakao__ left the game
+[10:16:27] [Server thread/INFO]: Stopping server
+[10:16:27] [Server thread/INFO]: [ViaVersion] Disabling ViaVersion v5.3.2
+[10:16:27] [Server thread/INFO]: [ViaVersion] ViaVersion has been disabled; uninjected the platform and shut down the scheduler.
+[10:16:27] [Server thread/INFO]: [KakaoEssentials] Disabling KakaoEssentials v1.2.5
+[10:16:27] [Server thread/INFO]: [WorldGuard] Disabling WorldGuard v7.0.9+5934e49
+[10:16:27] [Server thread/INFO]: [WorldGuard] Shutting down executor and cancelling any pending tasks...
+[10:16:27] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.3.1+6763-2e55f4f
+[10:16:27] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[10:16:27] [Server thread/INFO]: Saving players
+[10:16:28] [Server thread/INFO]: Saving worlds
+[10:16:28] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[10:16:28] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[10:16:28] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[10:16:28] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[10:16:28] [Server thread/INFO]: [ChunkHolderManager] Saved 625 block chunks, 625 entity chunks, 0 poi chunks in world 'world' in 0.93s
+[10:16:28] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[10:16:28] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[10:16:28] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[10:16:28] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[10:16:28] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[10:16:29] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world_nether' in 0.49s
+[10:16:29] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10:16:29] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[10:16:29] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[10:16:29] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[10:16:29] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[10:16:29] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world_the_end' in 0.08s
+[10:16:29] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10:16:29] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10:16:29] [Server thread/INFO]: Flushing Chunk IO
+[10:16:29] [Server thread/INFO]: Closing Thread Pool
+[10:16:29] [Server thread/INFO]: Closing Server

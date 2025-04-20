@@ -1,0 +1,61 @@
+name: KakaoEssentials
+version: 1.2.5
+main: de.leo.kakaoEssentials.KakaoEssentials
+api-version: 1.20
+depend: [WorldGuard]
+commands:
+  setenter:
+    description: Set enter message for a region
+    usage: /setenter <region> <message>
+  setleave:
+    description: Set leave message for a region
+    usage: /setleave <region> <message>
+  reloadmessages:
+    description: Reloads region messages from messages.yml
+    usage: /<command>
+    permission: kakao.reload
+  instastick:
+    description: Gives you the Death Stick
+  saveitems:
+    description: Save your inventory as item kit for a region
+    usage: /saveitems
+  loaditems:
+    description: Loads saved inventory for a region
+    usage: /loaditems <region>
+  damagestick:
+    description: Gives you a Damage Stick that deals custom damage
+    usage: /damagestick <damage> <kb>
+  w:
+    description: Executes multiple configured commands with one argument
+    usage: /w <argument>
+  reloadConfig:
+    description: Reloads the config file
+    usage: /reloadConfig
+  skull:
+    description: Get the head of a player
+    usage: /skull <player>
+permissions:
+  kakao.setmessage:
+    description: Allows setting region enter/leave messages
+    default: op
+  kakao.commandwrapper:
+    default: op
+    description: Allows using the /w command
+  kakao.reload:
+    default: op
+    description: Allows using the /reloadConfig command
+  kakao.damagestick:
+    description: Allows using /damagestick
+    default: op
+  kakao.saveitems:
+    description: Allows using /saveitems
+    default: op
+  kakao.loaditems:
+    description: Allows using /loaditems
+    default: op
+  kakao.instastick:
+    description: Allows using /instastick to get the Death Stick
+    default: op
+  kakao.skull:
+    description: Allows using /skull to get the head of a player
+    default: op
