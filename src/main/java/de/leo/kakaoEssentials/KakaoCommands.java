@@ -220,8 +220,8 @@ public class KakaoCommands {
         if (args.length >= 3) {
             try {
                 height = Double.parseDouble(args[2]);
-                if (height < 0 || height > 10) {
-                    player.sendMessage(ChatColor.RED + "Height multiplier must be between 0 and 10.");
+                if (height < -10 || height > 10) {
+                    player.sendMessage(ChatColor.RED + "Height multiplier must be between -10 and 10.");
                     return true;
                 }
             } catch (NumberFormatException ignored) {
