@@ -185,7 +185,7 @@ public class KakaoCommands {
     }
 
 
-    private static boolean damageStickCommand(CommandSender sender, Command command, String label, String[] args){
+    private static boolean damageStickCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player player)) return true;
         if (!player.hasPermission("kakao.damagestick")) {
             player.sendMessage(ChatColor.RED + "You don't have permission to use this command.");
@@ -193,40 +193,67 @@ public class KakaoCommands {
         }
 
         double damage = 3.0;
-
         double knockback = 0.5;
+        double height = 0.4; // default
 
         if (args.length >= 1) {
             try {
                 damage = Double.parseDouble(args[0]);
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException ignored) {
+                player.sendMessage(ChatColor.RED + "Invalid damage value.");
             }
         }
 
         if (args.length >= 2) {
             try {
                 knockback = Double.parseDouble(args[1]);
-            } catch (NumberFormatException e) {
+                if (knockback < -1000 || knockback > 1000) {
+                    player.sendMessage(ChatColor.RED + "Knockback strength must be between -1000 and 1000.");
+                    return true;
+                }
+            } catch (NumberFormatException ignored) {
+                player.sendMessage(ChatColor.RED + "Invalid knockback value.");
+                return true;
+            }
+        }
+
+        if (args.length >= 3) {
+            try {
+                height = Double.parseDouble(args[2]);
+                if (height < 0 || height > 10) {
+                    player.sendMessage(ChatColor.RED + "Height multiplier must be between 0 and 10.");
+                    return true;
+                }
+            } catch (NumberFormatException ignored) {
+                player.sendMessage(ChatColor.RED + "Invalid height multiplier.");
+                return true;
             }
         }
 
         ItemStack stick = new ItemStack(Material.STICK);
         ItemMeta meta = stick.getItemMeta();
         meta.setDisplayName(ChatColor.GOLD + "Damage Stick");
-        meta.setLore(List.of(ChatColor.GRAY + "Deals " + damage + " damage with " + knockback + "x KB"));
+        meta.setLore(List.of(
+                ChatColor.GRAY + "Deals " + damage + " damage",
+                ChatColor.GRAY + "Knockback: " + knockback + "x, Height: " + height + "x"
+        ));
 
         NamespacedKey dmgKey = new NamespacedKey(kakaoEssentials, "damage_amount");
         NamespacedKey kbKey = new NamespacedKey(kakaoEssentials, "knockback_power");
+        NamespacedKey heightKey = new NamespacedKey(kakaoEssentials, "knockback_height");
 
         PersistentDataContainer container = meta.getPersistentDataContainer();
         container.set(dmgKey, PersistentDataType.DOUBLE, damage);
         container.set(kbKey, PersistentDataType.DOUBLE, knockback);
+        container.set(heightKey, PersistentDataType.DOUBLE, height);
 
         stick.setItemMeta(meta);
         player.getInventory().addItem(stick);
         player.sendMessage(ChatColor.GREEN + "You received a Damage Stick.");
         return true;
     }
+
+
 
     private static boolean wCommand(CommandSender sender, Command command, String label, String[] args){
         if (!(sender instanceof Player)) {

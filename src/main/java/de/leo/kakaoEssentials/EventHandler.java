@@ -8,10 +8,12 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -29,7 +31,7 @@ public class EventHandler implements Listener {
     private int cooldownMillis;
 
     private EventHandler() {
-        // test
+
     }
 
     public static EventHandler getInstance() {
@@ -54,35 +56,38 @@ public class EventHandler implements Listener {
     }
 
     @org.bukkit.event.EventHandler
-    public void onEntityDamageByEntity(org.bukkit.event.entity.EntityDamageByEntityEvent event) {
+    public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
         if (!(event.getDamager() instanceof Player attacker)) return;
         if (!(event.getEntity() instanceof LivingEntity victim)) return;
 
         ItemStack item = attacker.getInventory().getItemInMainHand();
         if (!item.hasItemMeta()) return;
 
-        org.bukkit.inventory.meta.ItemMeta meta = item.getItemMeta();
+        ItemMeta meta = item.getItemMeta();
         String name = ChatColor.stripColor(meta.getDisplayName());
 
         if ("Death Stick".equalsIgnoreCase(name)) {
-            event.setCancelled(true); // cancel to override with kill
+            event.setCancelled(true);
             victim.setHealth(0);
         } else if ("Damage Stick".equalsIgnoreCase(name)) {
             PersistentDataContainer container = meta.getPersistentDataContainer();
             Double damage = container.get(new NamespacedKey(kakaoEssentials, "damage_amount"), PersistentDataType.DOUBLE);
             Double kb = container.get(new NamespacedKey(kakaoEssentials, "knockback_power"), PersistentDataType.DOUBLE);
+            Double height = container.get(new NamespacedKey(kakaoEssentials, "knockback_height"), PersistentDataType.DOUBLE);
 
-            if (damage != null) {
+            if (damage != null && kb != null && height != null) {
                 event.setCancelled(true);
-                victim.damage(damage); // ✅ Let Minecraft apply it, so KB & animation works
+                victim.damage(damage);
+
                 Vector direction = victim.getLocation().toVector().subtract(attacker.getLocation().toVector()).normalize();
-                direction.setY(0.4); // upward boost
-                direction.multiply(kb); // tweak strength
+                direction.setY(height); // now based on the custom height multiplier
+                direction.multiply(kb);
 
                 victim.setVelocity(direction);
             }
         }
     }
+
 
     @org.bukkit.event.EventHandler
     public void onPlayerRespawn(PlayerRespawnEvent event) {

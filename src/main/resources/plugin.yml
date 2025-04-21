@@ -1,5 +1,5 @@
 name: KakaoEssentials
-version: 1.2.5
+version: 1.2.6
 main: de.leo.kakaoEssentials.KakaoEssentials
 api-version: 1.20
 depend: [WorldGuard]
@@ -24,7 +24,7 @@ commands:
     usage: /loaditems <region>
   damagestick:
     description: Gives you a Damage Stick that deals custom damage
-    usage: /damagestick <damage> <kb>
+    usage: /damagestick <damage> <kbstrenght> <kbhight>
   w:
     description: Executes multiple configured commands with one argument
     usage: /w <argument>
